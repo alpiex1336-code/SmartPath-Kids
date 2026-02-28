@@ -1,0 +1,137 @@
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.aside {
+  position: sticky;
+  top: 1rem;
+}
+
+.feed {
+  min-width: 0;
+}
+
+.post {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-bottom: 1rem;
+  border: 2px solid rgba(30, 77, 123, 0.12);
+  box-shadow: var(--shadow-card);
+}
+
+.postHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.avatar {
+  font-size: 1.5rem;
+}
+
+.author {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text);
+}
+
+.text {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+  color: var(--color-text);
+}
+
+.link {
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.thumbUp,
+.thumbDown {
+  background: var(--color-sky-light);
+  border: 2px solid rgba(30, 77, 123, 0.2);
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.thumbUp:hover,
+.thumbDown:hover {
+  background: rgba(30, 77, 123, 0.12);
+}
+
+.thumbUpActive {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  border: 2px solid transparent;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.thumbDownActive {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  border: 2px solid transparent;
+  padding: 0.4rem 0.7rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.zoneTitle {
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.aiButton {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.aiButton:hover:not(:disabled) {
+  background: var(--color-primary-light);
+}
+
+.aiButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.aiError {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--color-coral);
+}
+
+@media (max-width: 900px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+  .aside {
+    position: static;
+  }
+}

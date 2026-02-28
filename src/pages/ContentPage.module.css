@@ -1,0 +1,137 @@
+.twoCol {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.aside {
+  position: sticky;
+  top: 1rem;
+}
+
+.card {
+  max-width: 640px;
+  min-width: 0;
+  margin: 0;
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 2px solid rgba(30, 77, 123, 0.12);
+  box-shadow: var(--shadow-card);
+}
+
+.articleTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.meta {
+  color: var(--color-text-soft);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.excerpt {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.body {
+  white-space: pre-wrap;
+  line-height: 1.65;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+}
+
+.hr {
+  border: none;
+  border-top: 2px dashed rgba(30, 77, 123, 0.2);
+  margin: 1.25rem 0;
+}
+
+.sectionTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.aiButton {
+  margin-top: 0.75rem;
+  padding: 0.6rem 1.2rem;
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-kid);
+  box-shadow: var(--shadow-soft);
+}
+
+.aiButton:hover:not(:disabled) {
+  background: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 24px rgba(30, 77, 123, 0.25);
+}
+
+.aiButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.aiError {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-coral);
+}
+
+.articleList {
+  max-width: 960px;
+  margin: 1rem auto 0;
+}
+
+.listTitle {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-text-soft);
+  margin-bottom: 0.5rem;
+}
+
+.articleLink {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: var(--color-sky-light);
+  border: 2px solid rgba(30, 77, 123, 0.15);
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.articleLink:hover {
+  background: var(--color-primary);
+  color: #fff;
+  border-color: transparent;
+}
+
+@media (max-width: 900px) {
+  .twoCol {
+    grid-template-columns: 1fr;
+  }
+  .aside {
+    position: static;
+  }
+}

@@ -1,0 +1,153 @@
+.card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border: 2px solid rgba(30, 77, 123, 0.12);
+  box-shadow: var(--shadow-card);
+}
+
+.balance {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.hint {
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  margin-bottom: 1rem;
+}
+
+.detectiveSection {
+  background: hsl(var(--card));
+  border: 2px dashed hsl(var(--border));
+  border-radius: var(--radius-sm);
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.detectiveTitle {
+  margin: 0 0 0.35rem;
+  color: var(--color-text);
+  font-size: 1rem;
+}
+
+.detectiveName {
+  margin: 0;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.detectivePitch {
+  margin: 0.35rem 0 0.65rem;
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+}
+
+.detectiveActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.legitBtn,
+.scamBtn {
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 0.8rem;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.legitBtn {
+  background: var(--color-mint);
+}
+
+.scamBtn {
+  background: var(--color-coral);
+}
+
+.detectiveFeedback {
+  margin: 0.6rem 0 0;
+  font-size: 0.88rem;
+  color: var(--color-text);
+}
+
+.arcadeTitle {
+  margin: 0 0 0.6rem;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+.gameList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gameRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.75rem;
+  background: var(--color-sky-light);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  border: 2px solid rgba(30, 77, 123, 0.12);
+}
+
+.gameRow strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-text);
+}
+
+.gameRow p {
+  font-size: 0.85rem;
+  color: var(--color-text-soft);
+  margin: 0;
+}
+
+.actionBtn {
+  padding: 0.45rem 0.9rem;
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.actionBtn:hover {
+  background: var(--color-primary-light);
+}
+
+.gameRow .result {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--color-primary);
+}
+
+.toast {
+  position: fixed;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.75rem 1.25rem;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 0.9rem;
+  max-width: 90%;
+  z-index: 100;
+  box-shadow: var(--shadow-card);
+}

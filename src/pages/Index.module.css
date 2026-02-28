@@ -1,0 +1,175 @@
+.page {
+  min-height: 100vh;
+  background: hsl(var(--background));
+  position: relative;
+  overflow: hidden;
+  padding: 1.25rem 1rem 2.5rem;
+}
+
+.nav {
+  max-width: 1120px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.brandBadge {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 800;
+}
+
+.brandText {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: hsl(var(--foreground));
+}
+
+.navButton {
+  border: 0;
+  border-radius: 999px;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  font-weight: 700;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+}
+
+.main {
+  max-width: 1120px;
+  margin: 2rem auto 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.copy {
+  z-index: 1;
+}
+
+.chip {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  background: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.title {
+  margin: 0.85rem 0 0.55rem;
+  line-height: 1.1;
+  font-size: clamp(2rem, 6vw, 3.8rem);
+  color: hsl(var(--foreground));
+}
+
+.titleAccent {
+  color: hsl(var(--primary));
+}
+
+.body {
+  max-width: 40rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.primary,
+.secondary {
+  border-radius: 999px;
+  padding: 0.7rem 1.25rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.primary {
+  border: 0;
+  background: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+}
+
+.secondary {
+  border: 2px solid hsl(var(--border));
+  background: hsl(var(--card));
+  color: hsl(var(--foreground));
+}
+
+.heroCard {
+  min-height: 240px;
+  border-radius: 1.2rem;
+  border: 2px solid hsl(var(--border));
+  background: linear-gradient(160deg, hsl(var(--peach)), hsl(var(--card)));
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  box-shadow: var(--shadow-card);
+}
+
+.heroEmoji {
+  font-size: clamp(2rem, 8vw, 3.3rem);
+}
+
+.heroCaption {
+  margin: 0.4rem 0 0;
+  color: hsl(var(--muted-foreground));
+}
+
+.floatingDot {
+  position: absolute;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: hsl(var(--warm-glow));
+  opacity: 0.5;
+  animation: float 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.dotA {
+  top: 6rem;
+  left: 10%;
+}
+
+.dotB {
+  top: 12rem;
+  right: 5%;
+}
+
+.dotC {
+  bottom: 5rem;
+  left: 20%;
+}
+
+.dotD {
+  top: 4rem;
+  right: 15%;
+}
+
+@media (min-width: 920px) {
+  .main {
+    margin-top: 3rem;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 440px);
+    align-items: center;
+    gap: 2.5rem;
+  }
+}

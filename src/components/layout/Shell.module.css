@@ -1,0 +1,88 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  color: var(--color-text);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.22);
+  box-shadow: var(--shadow-soft);
+  gap: 0.5rem;
+}
+
+.navGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back,
+.homeBtn {
+  background: rgba(255, 255, 255, 0.97);
+  border: none;
+  color: var(--color-primary);
+  padding: 0.52rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: var(--font-kid);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.back:hover,
+.homeBtn:hover {
+  background: #fff;
+  transform: translateY(-1px);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 800;
+  font-size: 1.28rem;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.logoEmoji {
+  font-size: 1.6rem;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: #fff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.coins {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 800;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-sm);
+  color: var(--color-primary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.coinIcon {
+  font-size: 1.3rem;
+}
+
+.main {
+  flex: 1;
+  padding: 1.5rem 1.25rem;
+  overflow: auto;
+}

@@ -1,0 +1,95 @@
+.wrap {
+  margin: 0.75rem 0;
+  padding: 1rem;
+  background: var(--color-sky-light);
+  border-radius: var(--radius-sm);
+  border: 2px solid rgba(30, 77, 123, 0.15);
+}
+
+.label {
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.zoneClickable {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%235B9BD5' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") 12 12, pointer;
+  padding: 0.35rem 0;
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+
+.zoneClickable:hover {
+  background: rgba(30, 77, 123, 0.12);
+}
+
+.zoneClickable .label {
+  margin-bottom: 0;
+}
+
+.magnifyHint {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+.hint {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+}
+
+.question {
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  font-style: italic;
+  margin-bottom: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.trueBtn,
+.falseBtn {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: var(--font-kid);
+  border: 2px solid transparent;
+}
+
+.trueBtn {
+  background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
+  color: #fff;
+}
+
+.falseBtn {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 100%);
+  color: #fff;
+}
+
+.trueBtn:hover,
+.falseBtn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.correct {
+  color: #22c55e;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.wrong {
+  color: #ef4444;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
