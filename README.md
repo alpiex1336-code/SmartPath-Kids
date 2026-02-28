@@ -163,7 +163,7 @@ npm run preview
 
 ---
 
-## AI Configuration (Optional)
+## AI Configuration (Important!)
 
 If you want AI-generated missions and assistant replies, create `.env`:
 
