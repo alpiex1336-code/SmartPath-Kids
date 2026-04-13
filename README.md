@@ -2,11 +2,13 @@
 
 > **A child-first, scenario-based digital safety simulator that trains scam detection as a daily habit, not a one-time lecture.**
 
-<p align="center">
-  <img src="docs/readme/landing.png" alt="SmartPath Kids landing page" width="720" /><br /><br />
-  <img src="docs/readme/game-menu.png" alt="Scenario selection — News, Social, YouTube, Email" width="720" /><br /><br />
-  <img src="docs/readme/news-scenario.png" alt="News investigation scenario with investigation assistant" width="720" />
-</p>
+<table align="center">
+  <tr>
+    <td align="center"><img src="docs/readme/landing.png" alt="SmartPath Kids landing page" width="220" /></td>
+    <td align="center"><img src="docs/readme/game-menu.png" alt="Scenario selection — News, Social, YouTube, Email" width="220" /></td>
+    <td align="center"><img src="docs/readme/news-scenario.png" alt="News investigation scenario with investigation assistant" width="220" /></td>
+  </tr>
+</table>
 
 ---
 
