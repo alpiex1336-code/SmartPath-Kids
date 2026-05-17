@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Fredoka+One&display=swap');
+
+:root {
+  --background: 28 60% 96%;
+  --foreground: 25 30% 20%;
+  --card: 30 50% 97%;
+  --card-foreground: 25 30% 20%;
+  --popover: 30 50% 97%;
+  --popover-foreground: 25 30% 20%;
+  --primary: 25 70% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 40 60% 90%;
+  --secondary-foreground: 25 40% 25%;
+  --muted: 30 30% 92%;
+  --muted-foreground: 25 15% 50%;
+  --accent: 45 80% 65%;
+  --accent-foreground: 25 40% 20%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 30 30% 85%;
+  --input: 30 30% 85%;
+  --ring: 25 70% 55%;
+  --radius: 1rem;
+
+  --sidebar-background: 0 0% 98%;
+  --sidebar-foreground: 240 5.3% 26.1%;
+  --sidebar-primary: 240 5.9% 10%;
+  --sidebar-primary-foreground: 0 0% 98%;
+  --sidebar-accent: 240 4.8% 95.9%;
+  --sidebar-accent-foreground: 240 5.9% 10%;
+  --sidebar-border: 220 13% 91%;
+  --sidebar-ring: 217.2 91.2% 59.8%;
+  --warm-glow: 35 80% 70%;
+  --peach: 20 70% 90%;
+  --soft-green: 140 30% 75%;
+  --device-bg: 220 15% 20%;
+  --device-screen: 220 20% 95%;
+
+  --font-kid: 'Nunito', system-ui, -apple-system, sans-serif;
+  --font-display: 'Fredoka One', var(--font-kid);
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --color-primary: hsl(var(--primary));
+  --color-primary-light: hsl(25 74% 62%);
+  --color-sky: hsl(200 85% 56%);
+  --color-mint: hsl(145 56% 48%);
+  --color-coral: hsl(0 72% 53%);
+  --color-card: hsl(var(--card));
+  --color-sky-light: hsl(30 48% 92%);
+  --color-text: hsl(var(--foreground));
+  --color-text-soft: hsl(var(--muted-foreground));
+  --shadow-soft: 0 10px 24px rgba(175, 106, 48, 0.2);
+  --shadow-card: 0 12px 30px rgba(74, 53, 33, 0.12);
+}
+
+.dark {
+  --background: 25 30% 8%;
+  --foreground: 30 30% 92%;
+  --card: 25 25% 12%;
+  --card-foreground: 30 30% 92%;
+  --popover: 25 25% 12%;
+  --popover-foreground: 30 30% 92%;
+  --primary: 25 70% 55%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 25 20% 18%;
+  --secondary-foreground: 30 30% 92%;
+  --muted: 25 15% 18%;
+  --muted-foreground: 25 15% 60%;
+  --accent: 45 60% 45%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 25 15% 22%;
+  --input: 25 15% 22%;
+  --ring: 25 70% 55%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.5;
+  font-family: var(--font-kid);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  background: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: var(--font-kid);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-20px) scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+.phone-frame {
+  width: min(320px, calc(100vw - 2rem));
+  height: 640px;
+  border-radius: 2.5rem;
+  border: 6px solid hsl(var(--device-bg));
+  background: hsl(var(--device-screen));
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.3), inset 0 0 0 2px rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.phone-frame::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 6px;
+  border-radius: 3px;
+  background: hsl(var(--device-bg));
+  z-index: 10;
+}
+
+.computer-frame {
+  width: 100%;
+  max-width: 900px;
+  border-radius: 1rem 1rem 0 0;
+  border: 6px solid hsl(var(--device-bg));
+  border-bottom: none;
+  background: hsl(var(--device-screen));
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+}
+
+.computer-stand {
+  width: 200px;
+  height: 20px;
+  background: hsl(var(--device-bg));
+  margin: 0 auto;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.computer-base {
+  width: 300px;
+  height: 8px;
+  background: hsl(var(--device-bg));
+  margin: 0 auto;
+  border-radius: 0 0 0.5rem 0.5rem;
+}

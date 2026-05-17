@@ -1,0 +1,88 @@
+.layout {
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  max-width: 560px;
+  margin: 0 auto;
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  border: 2px solid rgba(30, 77, 123, 0.12);
+  box-shadow: var(--shadow-card);
+}
+
+.badge {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #fff;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.source {
+  font-size: 0.9rem;
+  color: var(--color-text-soft);
+  margin-bottom: 0.5rem;
+}
+
+.title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.zoneTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+}
+
+.nextBtn {
+  padding: 0.55rem 1.1rem;
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.nextBtn:hover {
+  background: var(--color-primary-light);
+  transform: translateY(-1px);
+}
+
+.actionsRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.error {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--color-coral);
+}
+
+.aside {
+  min-height: 420px;
+}
+
+@media (min-width: 1080px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: start;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+}

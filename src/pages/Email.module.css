@@ -1,0 +1,143 @@
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 280px;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.aside {
+  position: sticky;
+  top: 1rem;
+}
+
+.inbox {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  border: 2px solid rgba(30, 77, 123, 0.12);
+  box-shadow: var(--shadow-card);
+}
+
+.inboxTitle {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-text);
+}
+
+.emailRow,
+.emailRowActive {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: transparent;
+  border: none;
+  border-radius: var(--radius-sm);
+  color: var(--color-text);
+  text-align: left;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.emailRow:hover {
+  background: var(--color-sky-light);
+}
+
+.emailRowActive {
+  background: var(--color-sky-light);
+  border: 2px solid var(--color-primary);
+}
+
+.from {
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.subject {
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.time {
+  color: var(--color-text-soft);
+  font-size: 0.8rem;
+}
+
+.reader {
+  background: var(--color-card);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  border: 2px solid rgba(30, 77, 123, 0.12);
+  box-shadow: var(--shadow-card);
+}
+
+.emailHeader {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.emailHeader p {
+  margin-bottom: 0.25rem;
+}
+
+.emailBody {
+  white-space: pre-wrap;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.zoneTitle {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text);
+}
+
+.aiButton {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-primary);
+  border: none;
+  color: #fff;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.aiButton:hover:not(:disabled) {
+  background: var(--color-primary-light);
+}
+
+.aiButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.aiError {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--color-coral);
+}
+
+.placeholder {
+  color: var(--color-text-soft);
+  text-align: center;
+  padding: 2rem;
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .aside {
+    position: static;
+  }
+}
